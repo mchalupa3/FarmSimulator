@@ -6,7 +6,7 @@ public class Main {
         System.out.println("Welcome to our farming game");
         System.out.println("To buy your first tractor and plot of land type Shop");
         userinput = Sc.nextLine();
-
+        System.out.println("Welcome to our farming game");
         if (userinput.toLowerCase().equals("shop")) {
             Shop tpShop = new Shop();
             tpShop.tpShop();
