@@ -8,7 +8,7 @@ public class Plots {
     }
     public static int[][] plots = new int[3][3];
 
-    public static void main(String[] args){
+    public static void resetPlots(){
         for(int i = 0; i < 4; i++ ){
             for(int b = 0; b < 4; b++){
                 plots[i][b] = 0;
