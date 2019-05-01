@@ -1,12 +1,23 @@
+import java.util.Scanner;
+import java.util.Timer;
+
 public class Plots {
     private boolean plotFilled;
     public double cropTime;
+    public static void Remainder(int seconds){
+
+
+    }
 
 
     public void setPlotStatus(boolean  b){
         plotFilled = b;
     }
-    public static int[][] plots = new int[3][3];
+    public static long[][] plots = new long[3][3];
+    public static int[][] displayPlots = {
+            {1,2,3},
+            {4,5,6},
+            {7,8,9}};
 
     public static void resetPlots(){
         for(int i = 0; i < 4; i++ ){
@@ -14,15 +25,23 @@ public class Plots {
                 plots[i][b] = 0;
             }
         }
+    }
 
+    public static void plantCrop(int plotToPlantOn){
+
+        int x = (plotToPlantOn-1)/3;
+        int y = (plotToPlantOn-1)%3;
+
+        System.out.println("X: " + x + "Y: " + y);
+        plots[x][y] = setTime(30);
     }
 
 
 
 
 
-    public void setTime(double t){
-        cropTime =t;
+    public static long setTime(int t){
+        return (System.currentTimeMillis()/1000) + t;
     }
 
     public double getCropTime(){
